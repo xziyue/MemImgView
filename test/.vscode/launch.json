@@ -1,0 +1,15 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug example program",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/example_cpp_program/program",
+            "args": [
+                "${workspaceFolder}/images/foreman.bin"
+            ],
+            "cwd": "${workspaceFolder}/example_cpp_program",
+        }
+	]
+}
