@@ -2,8 +2,8 @@ import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
 
-export class MemScopePanel {
-  public static currentPanel: MemScopePanel | undefined;
+export class MemImgPanel {
+  public static currentPanel: MemImgPanel | undefined;
   private readonly panel: vscode.WebviewPanel;
   private readonly extensionUri: vscode.Uri;
   private disposables: vscode.Disposable[] = [];
@@ -11,12 +11,12 @@ export class MemScopePanel {
   public static createOrShow(context: vscode.ExtensionContext) {
     const column = vscode.ViewColumn.Beside;
 
-    if (MemScopePanel.currentPanel) {
-      MemScopePanel.currentPanel.panel.reveal(column);
+    if (MemImgPanel.currentPanel) {
+      MemImgPanel.currentPanel.panel.reveal(column);
     } else {
       const panel = vscode.window.createWebviewPanel(
-        'memScope',
-        'MemScope',
+        'memImgView',
+        'MemImgView',
         column,
         {
           enableScripts: true,
@@ -32,7 +32,7 @@ export class MemScopePanel {
 
       panel.webview.html = html;
 
-      MemScopePanel.currentPanel = new MemScopePanel(panel, context);
+      MemImgPanel.currentPanel = new MemImgPanel(panel, context);
     }
   }
 
@@ -106,7 +106,7 @@ export class MemScopePanel {
   }
 
   public dispose() {
-    MemScopePanel.currentPanel = undefined;
+    MemImgPanel.currentPanel = undefined;
     this.panel.dispose();
     while (this.disposables.length) {
       this.disposables.pop()?.dispose();

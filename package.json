@@ -1,10 +1,10 @@
 {
-  "name": "memscope",
-  "displayName": "MemScope",
+  "name": "memimgview",
+  "displayName": "MemImgView",
   "description": "View images in memory while debugging.",
-  "repository": "https://github.com/mdhvg/memscope",
-  "version": "1.0.3",
-  "publisher": "mdhvg",
+  "repository": "https://github.com/xziyue/MemImgView",
+  "version": "1.0.0",
+  "publisher": "xziyue",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.97.0"
@@ -17,8 +17,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "memscope.openPanel",
-        "title": "Show Memscope"
+        "command": "memimgview.openPanel",
+        "title": "Show MemImgView Panel"
       }
     ]
   },

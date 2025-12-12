@@ -1,10 +1,10 @@
 import * as vscode from 'vscode';
-import { MemScopePanel } from './memScopePanel';
+import { MemImgPanel } from './memImgPanel';
 
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
-		vscode.commands.registerCommand('memscope.openPanel', () => {
-			MemScopePanel.createOrShow(context);
+		vscode.commands.registerCommand('memimgview.openPanel', () => {
+			MemImgPanel.createOrShow(context);
 		})
 	);
 }
